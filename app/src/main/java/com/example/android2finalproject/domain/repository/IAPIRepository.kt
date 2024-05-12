@@ -5,5 +5,8 @@ import com.example.android2finalproject.domain.model.WeatherInfoModel
 
 interface IAPIRepository {
     @Throws(NetworkException::class)
-    suspend fun getWeatherInfo(weatherInfo: WeatherInfoModel)
+    suspend fun getWeatherInfoByCityName(cityName: String)
+
+    @Throws(NetworkException::class)
+    suspend fun getWeatherInfoByGeo(latitude: Double, longitude: Double)
 }
