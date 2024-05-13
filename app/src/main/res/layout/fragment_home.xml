@@ -29,32 +29,56 @@
         android:textColor="?attr/colorOnPrimary"
         android:fontFamily="sans-serif-medium"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputTextLayout"
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/inputTextLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="30dp"-->
+<!--        android:layout_marginTop="130dp"-->
+<!--        android:layout_marginEnd="100dp"-->
+<!--        android:focusableInTouchMode="true"-->
+<!--        app:boxBackgroundMode="filled"-->
+<!--        app:boxCornerRadiusBottomEnd="12dp"-->
+<!--        app:boxCornerRadiusBottomStart="12dp"-->
+<!--        app:boxCornerRadiusTopEnd="12dp"-->
+<!--        app:boxCornerRadiusTopStart="12dp"-->
+<!--        app:boxStrokeWidth="0dp"-->
+<!--        app:boxStrokeWidthFocused="0dp">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/inputTextEdit"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Search the city"-->
+<!--            android:textColor="?attr/colorOnSecondary" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+    <EditText
+        android:id="@+id/otherInputEditText"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:paddingStart="20dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="130dp"
         android:layout_marginEnd="100dp"
-        android:layout_marginStart="30dp"
-        app:boxCornerRadiusBottomEnd="12dp"
-        app:boxCornerRadiusBottomStart="12dp"
-        app:boxCornerRadiusTopEnd="12dp"
-        app:boxCornerRadiusTopStart="12dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputTextEdit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="?attr/colorOnSecondary"
-            android:hint="Search the city" />
-    </com.google.android.material.textfield.TextInputLayout>
-
+        android:hint="Search the city"
+        android:inputType="textEmailAddress"
+        android:textColor="?attr/colorOnSecondary"
+        android:background="@drawable/custom_button2"/>
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="68dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="125dp"
+        android:contentDescription="@string/city"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/custom_button1"
+        android:layout_marginTop="130dp"
         android:layout_gravity="end"
         android:layout_marginEnd="30dp"
         android:src="@drawable/search" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcView"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="230dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </FrameLayout>
