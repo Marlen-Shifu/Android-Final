@@ -29,29 +29,6 @@
         android:textColor="?attr/colorOnPrimary"
         android:fontFamily="sans-serif-medium"/>
 
-<!--    <com.google.android.material.textfield.TextInputLayout-->
-<!--        android:id="@+id/inputTextLayout"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="30dp"-->
-<!--        android:layout_marginTop="130dp"-->
-<!--        android:layout_marginEnd="100dp"-->
-<!--        android:focusableInTouchMode="true"-->
-<!--        app:boxBackgroundMode="filled"-->
-<!--        app:boxCornerRadiusBottomEnd="12dp"-->
-<!--        app:boxCornerRadiusBottomStart="12dp"-->
-<!--        app:boxCornerRadiusTopEnd="12dp"-->
-<!--        app:boxCornerRadiusTopStart="12dp"-->
-<!--        app:boxStrokeWidth="0dp"-->
-<!--        app:boxStrokeWidthFocused="0dp">-->
-
-<!--        <com.google.android.material.textfield.TextInputEditText-->
-<!--            android:id="@+id/inputTextEdit"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:hint="Search the city"-->
-<!--            android:textColor="?attr/colorOnSecondary" />-->
-<!--    </com.google.android.material.textfield.TextInputLayout>-->
     <EditText
         android:id="@+id/otherInputEditText"
         android:layout_width="match_parent"
@@ -62,8 +39,9 @@
         android:layout_marginEnd="100dp"
         android:hint="Search the city"
         android:inputType="textEmailAddress"
-        android:textColor="?attr/colorOnSecondary"
-        android:background="@drawable/custom_button2"/>
+        android:textColor="?attr/collapseContentDescription"
+        android:background="@drawable/custom_button2"
+        app:layout_collapseMode="parallax"/>
     <ImageButton
         android:id="@+id/imageButton"
         android:contentDescription="@string/city"
@@ -73,12 +51,14 @@
         android:layout_marginTop="130dp"
         android:layout_gravity="end"
         android:layout_marginEnd="30dp"
-        android:src="@drawable/search" />
+        android:src="@drawable/search"
+        app:layout_collapseMode="parallax"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcView"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="230dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        app:layout_collapseMode="parallax"/>
 
 </FrameLayout>

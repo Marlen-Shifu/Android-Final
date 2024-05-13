@@ -14,5 +14,7 @@
         <!-- Customize your theme here. -->
         <item name="colorTertiary">@color/black</item>
         <item name="colorTertiaryContainer">@color/area_night</item>
+        <item name="colorTertiaryFixed">@color/area_night</item>
+        <item name="collapseContentDescription">@color/white</item>
     </style>
 </resources>
