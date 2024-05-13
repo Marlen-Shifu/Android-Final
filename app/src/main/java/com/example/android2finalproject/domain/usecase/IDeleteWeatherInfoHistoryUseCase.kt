@@ -4,6 +4,6 @@ import com.example.android2finalproject.domain.model.DataState
 import com.example.android2finalproject.domain.model.WeatherInfoModel
 import kotlinx.coroutines.flow.Flow
 
-interface IDeleteWeatherInfoHistory{
+interface IDeleteWeatherInfoHistoryUseCase{
     suspend operator fun invoke(weatherInfo: WeatherInfoModel): Flow<DataState<Boolean>>
 }
