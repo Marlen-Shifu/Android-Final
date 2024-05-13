@@ -1,6 +1,8 @@
 package com.example.android2finalproject.domain.ui.activity
 
+import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,15 +14,17 @@ import com.example.android2finalproject.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var navigationController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         supportActionBar?.hide()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val navHostFragment = supportFragmentManager
-            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-        navigationController = navHostFragment.navController
 
+        Handler().postDelayed({
+            val intent = Intent(this@MainActivity, SplashScreen::class.java)
+            startActivity(intent)
+            finish()
+        }, 1500)
     }
 }
