@@ -4,7 +4,8 @@ enum class WeatherStatus {
     SUNNY,
     CLOUDY,
     RAIN,
-    SNOW;
+    SNOW,
+    UNDEFINED;
 
     override fun toString(): String {
         return when(this) {
@@ -12,6 +13,7 @@ enum class WeatherStatus {
             CLOUDY -> "cloudy"
             RAIN -> "rain"
             SNOW -> "snow"
+            UNDEFINED -> "undefined"
         }
     }
 }
