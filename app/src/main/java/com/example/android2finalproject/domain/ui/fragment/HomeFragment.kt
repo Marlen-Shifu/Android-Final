@@ -5,8 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.android2finalproject.R
 import com.example.android2finalproject.databinding.FragmentHomeBinding
+import com.example.android2finalproject.domain.ui.adapter.WeatherAdapter
 
 class HomeFragment : Fragment() {
 
@@ -22,7 +25,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val weatherList = arrayListOf("1", "2", "3")
 
-
+        val recyclerView: RecyclerView = binding.rcView
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        val adapter = WeatherAdapter(this, weatherList)
+        recyclerView.adapter = adapter
     }
 }
