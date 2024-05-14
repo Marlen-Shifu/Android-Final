@@ -1,4 +1,4 @@
-package com.example.android2finalproject.domain.ui.activity
+package com.example.android2finalproject.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,13 +7,16 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.android2finalproject.R
 import com.example.android2finalproject.databinding.ActivityMainBinding
+import com.example.android2finalproject.ui.viewmodel.MainActivityViewModel
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

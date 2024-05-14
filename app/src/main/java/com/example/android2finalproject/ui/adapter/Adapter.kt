@@ -1,4 +1,4 @@
-package com.example.android2finalproject.domain.ui.adapter
+package com.example.android2finalproject.ui.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -11,6 +11,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android2finalproject.R
 import com.example.android2finalproject.databinding.HistoryCardBinding
+import com.example.android2finalproject.domain.model.WeatherInfoModel
+import com.example.android2finalproject.ui.util.UiState
+import kotlinx.coroutines.flow.StateFlow
 
 class WeatherAdapter(private val fragment: Fragment, private val weatherList: List<Any>) : RecyclerView.Adapter<WeatherAdapter.WeatherViewHolder>() {
 

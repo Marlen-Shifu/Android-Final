@@ -5,5 +5,5 @@ import com.example.android2finalproject.domain.model.WeatherInfoModel
 import kotlinx.coroutines.flow.Flow
 
 interface IGetWeatherInfoUseCase{
-    operator fun invoke(cityName: String): Flow<DataState<WeatherInfoModel>>
+    suspend operator fun invoke(cityName: String): Flow<DataState<WeatherInfoModel>>
 }

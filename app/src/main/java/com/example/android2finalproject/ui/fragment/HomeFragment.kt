@@ -1,4 +1,4 @@
-package com.example.android2finalproject.domain.ui.fragment
+package com.example.android2finalproject.ui.fragment
 
 import android.content.Context
 import android.os.Bundle
@@ -8,16 +8,30 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
-import androidx.core.content.ContextCompat.getSystemService
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android2finalproject.R
 import com.example.android2finalproject.databinding.FragmentHomeBinding
-import com.example.android2finalproject.domain.ui.adapter.WeatherAdapter
+import com.example.android2finalproject.service.usecase.GetWeatherInfoUseCase
+import com.example.android2finalproject.ui.adapter.WeatherAdapter
+import com.example.android2finalproject.ui.viewmodel.MainActivityViewModel
+import com.example.android2finalproject.ui.viewmodel.ViewModelFactory
 
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
+
+//    var modelFactory: ViewModelFactory = ViewModelFactory(
+//        getWeatherInfoCase = GetWeatherInfoUseCase(),
+////        getWeatherInfoHistoryCase =
+//    )
+
+//    private val model: MainActivityViewModel by lazy {
+//        ViewModelProvider(this, modelFactory)[MainActivityViewModel::class.java]
+//    }
+
+//    private val model = MainActivityViewModel()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,7 +43,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val weatherList = arrayListOf("1", "2", "3")
+        val weatherList = listOf(model.historyWeatherInfos)
 
         val recyclerView: RecyclerView = binding.rcView
         recyclerView.layoutManager = LinearLayoutManager(context)
